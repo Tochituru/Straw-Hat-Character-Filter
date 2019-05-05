@@ -1,0 +1,32 @@
+input {
+  width: 500px;
+  height: 40px;
+  font-size: 18px;
+}
+
+#lista-de-personajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.personaje {
+  width: 20%;
+  height: auto;
+  padding: 1%;
+  margin: 10px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.personaje img {
+  width: 70%;
+  height: auto
+}
+
+.nomostrar {
+  display: none;
+};
