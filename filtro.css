@@ -1,7 +1,66 @@
+@font-face {
+  font-family: 'one_pieceregular';
+  src: url('./webfont/one_piece_font-webfont.woff2') format('woff2'), url('./webfont/one_piece_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, .consigna, .titulo, input {
+  font-family: 'one_pieceregular';
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.consigna {
+  font-size: 30px;
+  margin: 10px 0 10px 50px;
+}
+
 input {
-  width: 500px;
-  height: 40px;
-  font-size: 18px;
+  width: 30%;
+  height: 20%;
+  font-size: 25px;
+  padding: 5px 20px;
+  border: #599bb3 1px solid;
+  margin: 20px 0 20px 50px;
+}
+
+::placeholder {
+  color: #599bb3;
+}
+
+button {
+  margin-left: 20px;
+  -moz-box-shadow: 0px 10px 14px -7px #276873;
+  -webkit-box-shadow: 0px 10px 14px -7px #276873;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background-color: #599bb3;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 13px 32px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+}
+
+button:hover {
+  background-color: #408c99;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
 }
 
 #lista-de-personajes {
@@ -15,18 +74,72 @@ input {
   height: auto;
   padding: 1%;
   margin: 10px;
-  border: 2px solid black;
+  border: 2px solid #599bb3;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  -moz-box-shadow: 0px 10px 14px -7px #276873;
+  -webkit-box-shadow: 0px 10px 14px -7px #276873;
+  box-shadow: 0px 10px 14px -7px #276873;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.titulo {
+  font-size: 25px;
+  margin: 10px;
 }
 
 .personaje img {
   width: 70%;
-  height: auto
+  height: auto;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 15px;
 }
 
-.nomostrar {
-  display: none;
-};
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  h1 {
+    max-width: 95%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .consigna {
+    max-width: 95%;
+    font-size: 25px;
+    margin: 10px 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    width: 90%;
+    max-width: 70%;
+    align-self: center;
+    margin: 10px;
+    font-size: 20px;
+  }
+  ::placeholder {
+    font-size: 20px;
+  }
+
+  .personaje {
+    width: 40%;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .personaje img {
+    width: 60%;
+  }
+}
